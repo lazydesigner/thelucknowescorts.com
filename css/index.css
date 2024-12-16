@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E6F7E6;
+}
+
+:root {
+    /* --primary:black;
+    --accent:white;
+    --link:rgb(205, 180, 41);
+    --nav:#B30F0F; */
+
+    /* --primary:#f9f9f9;
+    --link:#007acc;
+    --accent:black;
+    --nav:#4caf50; */
+    /* 
+    --primary:#f0f4f8;
+    --link:#ff4081;
+    --accent:black;
+    --nav:#03a9f4 */
+
+
+    --primary: #E6F7E6;
+    --link: #ff4081;
+    --accent: black;
+    --nav: #03a9f4
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    /* aspect-ratio: 3/1; */
+    
+    /* 1440x480 */
+    height: 400px;
+    background-color: grey;
+    background-image:url('../Thelucknowesco.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    width: 90%;
+    height: 50px;
+    margin: 1% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    display: block;
+    width: fit-content;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: var(--nav);
+    padding: 0 20px;
+    margin: 0 1px;
+    /* text-align: center; */
+    line-height: 50px;
+}
+
+nav a:hover {
+    background-color: var(--link);
+}
+
+.content-sec {
+    color: var(--accent);
+    margin-top: 15px;
+}
+
+.content-sec :where(h1, h2, h3) {
+    font-size: 2.5rem;
+    color: var(--nav);
+    font-weight: 900;
+}
+
+.content-sec :where(h4) {
+    font-size: 2rem;
+    color: var(--nav);
+    font-weight: 900;
+}
+
+.content-sec p {
+    font-size: 1.2rem;
+    line-height: 27.5px;
+}
+
+.content-sec strong {
+    color: var(--nav);
+    font-weight: 900;
+}
+
+.content-sec a {
+    color: var(--link);
+    font-weight: 900;
+}
+
+
+.profiles-flex {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(24%, 1fr));
+    grid-auto-rows: 500px;
+}
+
+.profile {
+    padding: 2%;
+}
+
+.profile-box {
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+    background-color: var(--nav);
+    border-radius: 10px;
+    padding: 3%;
+
+}
+
+.profile-img {
+    width: 100%;
+    height: 340px;
+    background-color: lightgrey;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.content-sec .profile-cat {
+    background-color: var(--primary);
+    color: var(--link);
+    font-weight: 600;
+    padding: .5% 2%;
+    text-align: center;
+}
+
+.content-sec .profile-cat p,
+.profile-name p {
+    font-size: unset;
+    line-height: unset;
+}
+
+.profile-rating {
+    margin-top: 1%;
+}
+
+.row-profile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.col-img {
+    flex: 30%;
+}
+
+.col-img img {
+    width: 80%;
+    object-fit: fill;
+    justify-self: center;
+}
+
+.col-det {
+    flex: 69%;
+}
+
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20%, 1fr));
+    grid-auto-rows: 300px;
+    justify-content: space-evenly;
+}
+
+.location {
+    padding: 5%;
+    margin: 3% 0;
+}
+
+.location-box {
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.location-img {
+    width: 100%;
+    height: 200px;
+    background-color: lightgrey;
+    border-radius: 3px 3px 0 0;
+}
+
+.location-box p {
+    margin: 2%;
+    text-align: center;
+    font-weight: 600;
+    color: var(--link);
+    font-size: 1.1rem;
+}
+
+.footbox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(23%, 1fr));
+    gap: 10px;
+}
+
+.footbox a {
+    width: 100%;
+    /* height: ; */
+    padding: 15px 0;
+    text-align: center;
+    background-color: #03a9f4;
+    border-radius: 10px;
+    margin: 5px 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.footbox a:hover {
+    background-color: var(--link);
+}
+
+footer {
+    background-color: var(--nav);
+    padding: 2% 0;
+    margin-top: 20px;
+}
+
+.footer-logo strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 10px;
+    color: #cfd8dc;
+    border-right: 2px solid white;
+}
+
+.footer-links a:last-child {
+    border: 0;
+}
+
+@media (max-width:900px) {
+    nav {
+        width: 98%;
+        height: auto;
+    }
+
+    .nav a {
+        width: fit-content;
+        font-size: 0.9rem;
+        margin: 2px 1px;
+        padding: 0 7.5px;
+    }
+
+    .location-grid {
+        grid-template-columns: repeat(3, minmax(33%, 1fr));
+        grid-auto-rows: 210px;
+    }
+
+    .location-img {
+        height: 150px;
+    }
+
+    .footbox {
+        grid-template-columns: repeat(3, minmax(33%, 1fr));
+    }
+
+    .footbox a {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .profiles-flex {
+        grid-template-columns: repeat(3, minmax(33%, 1fr));
+    }
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width:600px) {
+    header {
+        aspect-ratio: 2/1;
+    }
+
+    nav {
+        height: auto;
+        display: none;
+    }
+
+    .nav a {
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .location-grid {
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        grid-auto-rows: 210px;
+    }
+
+    .mobile-nav {
+        padding: 2%;
+        display: grid;
+        justify-content: end;
+    }
+
+    .location-img {
+        height: 150px;
+    }
+
+    .footbox {
+        grid-template-columns: repeat(2, minmax(48%, 1fr));
+    }
+
+    .footbox a {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .profiles-flex {
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
+    }
+
+    .col-img,.col-det{flex:100%}
+    .col-img img{float: none!important;}
+    .row-profile:nth-child(even){flex-direction: column-reverse;}
+
+
+}

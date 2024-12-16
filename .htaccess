@@ -1,0 +1,22 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+Options -Indexes
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+#ErrorDocument 404 http://localhost/funinlife/
+
+RewriteRule ^$ index.php [NC,L]
+ReWriteRule ^escort-service-near-([a-z\-]+)/$ area.php?area=$1 [NC,L]
+
+
+ReWriteRule ^terms-and-condition/$ terms-and-condition.php [NC,L]
+ReWriteRule ^privacy-policy/$ privacy-policy.php [NC,L]
+ReWriteRule ^contact-us/$ contact-us.php [NC,L]
+
+
+
+
+RewriteRule ^sitemap\.xml/?$ sitemap.xml [NC,L]
+#ReWriteRule ^404([/]?)$ error.php [NC,L]
